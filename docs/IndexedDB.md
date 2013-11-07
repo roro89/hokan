@@ -32,10 +32,10 @@ require(['hokan/IndexedDB', 'dojo/when'], function (IndexedDB, when) {
 			id: 1,
 			foo: 'bar'
 		}).then(function (id) {
-			store.get(id).then(function (item) {
-				console.log(item);
-			});
-		});
+			return store.get(id);
+		}).then(function (item) {
+			console.log(item);
+		});Hola, sólo una pequeña sugerencia
 	});
 });
 ```
